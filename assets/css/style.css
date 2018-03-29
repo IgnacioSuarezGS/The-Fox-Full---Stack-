@@ -1,0 +1,119 @@
+/* Estructura basica */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Grid */
+
+.grid--wrapper,
+.grid--quarter-columns,
+.grid--two-columns,
+.grid--three-columns,
+.grid--four-columns,
+.grid--five-columns,
+.grid--six-columns {
+    display: grid;
+}
+
+.grid--wrapper {
+    grid-template-columns: minmax(1em, 1fr) minmax(0, 75em) minmax(1em, 1fr);
+}
+
+.grid--wrapper>div {
+    grid-column: 2;
+}
+
+.grid--two-columns {
+    grid-template-columns: 50% 50%;
+}
+
+.grid--three-columns {
+    grid-template-columns: repeat(3, calc(100%/3));
+}
+
+.grid--four-columns {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.grid--five-columns {
+    grid-template-columns: 5;
+}
+
+.grid--six-columns {
+    grid-template-columns: 6;
+}
+
+.grid--quarter-columns {
+    grid-template-columns: 80% 20%;
+}
+
+/* Clases Generales */
+
+/* nav */
+
+nav li {
+    padding: 10px;
+    color: black;
+    display: inline;
+}
+
+/* header */
+
+header {
+    background-color: turquoise;
+}
+
+#banda-verde {
+    background-color: #20CAA8;
+}
+
+#banda-imagenes {
+    background-color: grey;
+}
+
+#cuatro-columnas {
+    background-color: #1A1C27;
+    color: white;
+}
+
+
+/* section.grid--wrapper#desplegables>div.grid--two-columns>div*2>h2+p+h3+p+button */
+
+
+
+
+/*ELIMINAR */
+
+nav {
+    min-height: 5vh;
+}
+
+header {
+    min-height: 50vh;
+}
+
+#banda-verde,
+#banda-imagenes,
+#pictures-menu,
+#partners {
+    min-height: 15vh;
+}
+
+section,
+footer {
+    min-height: 30vh;
+}
+
+/*END:DELETE */
