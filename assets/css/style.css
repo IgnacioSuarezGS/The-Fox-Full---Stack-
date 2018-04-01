@@ -12,7 +12,7 @@ html {
 
 body {
     font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* ----------------------------------------- grid ---------------------------------- */
@@ -63,6 +63,7 @@ body {
 
 .grid--four-columns {
     grid-template-columns: repeat(4, calc(100%/4));
+    grid-gap: 30px;
 }
 
 .grid--five-columns {
@@ -96,7 +97,7 @@ nav .menu-principal {
 
 nav li,
 h1,
-#subscripcion li {
+#subscripcion li, #subscripcion h2, #iconos li {
     display: inline-flex;
     list-style: none;
     color: #2c3e50; 
@@ -132,10 +133,6 @@ h1 {
     font-family: 'Lato', sans-serif;
 }
 
-.grosor-fino {
-    font-weight: 300;
-}
-
 h1,
 nav li a {
     color: #2c3e50;
@@ -144,7 +141,7 @@ nav li a {
 nav a,
 header a,
 #subscripcion a,
-footer a {
+footer a, .logo2 a, #iconos i {
     text-decoration: none;
 }
 
@@ -156,8 +153,13 @@ footer {
 
 footer p,
 footer a,
-.contenedor-imagen:hover .grid--quarter-past-columns {
+.contenedor-imagen:hover .grid--quarter-past-columns, .logo2 h2 {
     color: white;
+}
+
+.logo2 h2 {
+    font-size: 3em;
+    padding: 0 0 10px 0 ;
 }
 
 
@@ -188,18 +190,12 @@ footer a,
 
 .sombreado {
     height: 100%;
-    background-color: blue;
-    opacity: 0;
+    opacity: 0.9;
 }
 
 .contenedor-imagen:hover .sombreado {
-    opacity: 0.5;
+    opacity: 0.3;
 }
-
-.contenedor-imagen:hover .grid--quarter-past-columns {
-    background-color: black;
-}
-
 
 #texto-imagen img {
     height: 100%;
@@ -211,7 +207,7 @@ footer a,
     height: 200px;
 }
 
-#banda-verde div, .banda--imagenes-texto {
+#banda-verde div, .banda--imagenes-texto, #fondo-menu h2, #fondo-menu p {
     text-align: center;
     color: white;
     bottom: 0;
@@ -238,12 +234,17 @@ footer a,
     height: 500px;
 }
 
+
 #cuatro-columnas {
     background-color: #1A1C27;
     color: white;
 }
 
 /* Otras Clases */
+
+.grosor-fino {
+    font-weight: 300;
+}
 
 .barra {
     background-image: url("../../bar3.jpg");
@@ -264,6 +265,43 @@ footer a,
 
 .size-letra {
     font-size: 2em;
+}
+
+.formulario input {
+    padding: 5%;
+    margin: 0 0 15px 0;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+#subscripcion li {
+    padding: 10px 10px 10px 0;
+}
+
+.verde {
+    color: #1abc9c;
+}
+
+#cuatro-columnas p, #cuatro-columnas hr,  {
+    color: #6b757f;
+}
+
+#cuatro-columnas h2, #cuatro-columnas p {
+    padding: 10px 0 10px 0;
+}
+
+
+/* -------------------- botones ----------------------- */
+.btn {
+    padding: 15px;
+    font-weight: 600;
+}
+
+.btn-grey {
+    background-color: #a1b1bc;
+    color: white;
+    border-style: none;
+    border-radius: 2px;
 }
 
 /* -------------------------------acordion---------------------------------- */
@@ -293,7 +331,7 @@ footer a,
 }
 
 
-a img {
+a img, button {
     text-align: center;
 }
 
