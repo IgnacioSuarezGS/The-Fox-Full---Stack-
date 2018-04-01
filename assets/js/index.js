@@ -1,6 +1,7 @@
 const jsonComentarios = "data/comentarios.json";
 const jsonAmazingWork = "data/amazingWork.json";
 const jsonSmallImages = "data/smallImages.json";
+const jsonBandaImagenes = "data/bandaImagenes.json";
 
 
 function json(url) {
@@ -11,7 +12,7 @@ function json(url) {
 json(jsonComentarios).then(function (comentarios) {
     comentarios.forEach(comentario => {
         $("#comentarios").append(`
-        <div class="grid--two-columns">
+        <div class="grid--two-parter-columns">
             <img src="${comentario.imagen}" alt="${comentario.nombre}">
             <div>
                 <h3>${comentario.nombre}</h3>
@@ -51,7 +52,22 @@ json(jsonSmallImages).then(function (smallImages) {
     });
 })
 
-
+json(jsonBandaImagenes).then(function (bandaImagenes) {
+    bandaImagenes.forEach(banda => {
+        $("#banda-imagenes").append(`
+        <div>
+        <img src="${banda.imagen}" alt="">
+            <div class="banda--imagenes-texto">
+            <h3>${banda.titulo}</h3>
+                <div class="grid--two-columns">
+                    <p>${banda.fecha}</p>
+                    <p>${banda.categoria}</p>
+                </div>
+            </div>     
+        </div>
+        `)
+    });
+})
 
 // Acordeon
 

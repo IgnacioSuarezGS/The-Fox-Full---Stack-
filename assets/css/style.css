@@ -15,12 +15,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Grid */
+/* ----------------------------------------- grid ---------------------------------- */
 
 .grid--wrapper,
 .grid--quarter-columns,
 .grid--quarter-past-columns,
 .grid--two-columns,
+.grid--two-parter-columns,
 .grid--three-columns,
 .grid--four-columns,
 .grid--five-columns,
@@ -43,6 +44,19 @@ body {
     grid-gap: 30px;
 }
 
+.grid--two-parter-columns {
+    grid-template-columns: 25% 75%;
+    grid-gap: 20px;
+    padding: 30px;
+    background-color: #F9FAFB;
+    border: 1px solid #E9EBED;
+}
+
+.grid--two-parter-columns img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
 .grid--three-columns {
     grid-template-columns: repeat(3, calc(100%/3));
 }
@@ -69,14 +83,14 @@ body {
 
 /* Clases Generales */
 
-/* nav */
+/* ----------------------------------------- nav ------------------------------------ */
 
 nav {
     height: 100px;
     line-height: 100px;
 }
 
-nav .grid--wrapper div {
+nav .menu-principal {
     margin: 0;
 }
 
@@ -85,13 +99,17 @@ h1,
 #subscripcion li {
     display: inline-flex;
     list-style: none;
+    color: #2c3e50; 
 }
 
+nav li {
+    padding: 0 8px;
+}
 
-/* header */
+/* ------------------------------------------header---------------------------------- */
 
 header {
-    background-image: url(../../recursos/bc.jpg);
+    background-image: url("../pictures/background1.jpg");
     height: 900px;
 }
 
@@ -105,13 +123,36 @@ header li {
     padding: 10px 0px 0px 0px;
 }
 
-/* footer */
+
+
+/* --------------------------------------------- h1 ---------------------------------- */
+
+h1 {
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+}
+
+.grosor-fino {
+    font-weight: 300;
+}
+
+h1,
+nav li a {
+    color: #2c3e50;
+}
+
+nav a,
+header a,
+#subscripcion a,
+footer a {
+    text-decoration: none;
+}
+
+/* -------------------------------------- footer --------------------------------------- */
 
 footer {
     background-color: #222533;
 }
-
-/* hover */
 
 footer p,
 footer a,
@@ -119,7 +160,8 @@ footer a,
     color: white;
 }
 
-/* secciones */
+
+/* ------------------------------------secciones--------------------------------- */
 
 #titulos-imagenes img {
     /* height: 6363px; */
@@ -158,22 +200,39 @@ footer a,
     background-color: black;
 }
 
-#banda-verde {
-    background-color: #20CAA8;
+
+#texto-imagen img {
+    height: 100%;
+    width: 100%;
 }
 
-#banda-verde div {
+#banda-verde {
+    background-color: #20CAA8;
+    height: 200px;
+}
+
+#banda-verde div, .banda--imagenes-texto {
     text-align: center;
     color: white;
-    padding: 10px;
+    bottom: 0;
+    top: inherit;
 }
 
 #banda-imagenes {
-    background-color: grey;
+    height: 250px;
+}
+
+#banda-imagenes > div {
+    position: relative;
+}
+
+#banda-imagenes img {
+    height: 100%;
+    width: 100%;
 }
 
 #fondo-menu {
-    background-image: url("../../recursos/purchase3.jpg");
+    background-image: url("../pictures/purchase3.jpg");
     background-repeat: no-repeat;
     width: auto;
     height: 500px;
@@ -186,29 +245,8 @@ footer a,
 
 /* Otras Clases */
 
-h1 {
-    font-size: 3em;
-    font-family: 'Lato', sans-serif;
-}
-
-h1 span {
-    font-weight: 300;
-}
-
-h1,
-nav li a {
-    color: #2c3e50;
-}
-
-nav a,
-header a,
-#subscripcion a,
-footer a {
-    text-decoration: none;
-}
-
 .barra {
-    background-image: url(../../bar3.jpg);
+    background-image: url("../../bar3.jpg");
     background-repeat: no-repeat;
     width: 135px;
     height: 4px;
@@ -217,11 +255,6 @@ footer a {
 .medida, #small-images img {
     height: 40px;
     width: 40px;
-}
-
-.medida-ipad {
-    height: 400px;
-    width: 572px;
 }
 
 .medida-icono {
@@ -233,11 +266,7 @@ footer a {
     font-size: 2em;
 }
 
-/* section.grid--wrapper#desplegables>div.grid--two-columns>div*2>h2+p+h3+p+button */
-
-/* menu */
-
-/* Style the buttons that are used to open and close the accordion panel */
+/* -------------------------------acordion---------------------------------- */
 
 .accordion {
     background-color: #eee;
@@ -261,4 +290,15 @@ footer a {
     display: none;
     background-color: white;
     overflow: hidden;
+}
+
+
+a img {
+    text-align: center;
+}
+
+.check {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
 }

@@ -1,27 +1,31 @@
-[
-    {
-     "imagen": "",
-     "nombre": "Sam Isbister",
-     "cargo": "Web Designer",
-     "comentario": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed lectus a mauris facilisis porta vel a nunc. Fusce sit amet neque volutpat, pretium risus id, placerat libero. Suspendisse ac      condimentum lectus."    
+[{
+        "imagen": "assets/pictures/banda-imagenes/1.jpg",
+        "titulo": "Standard Blog Title Here",
+        "fecha": "27 July, 2014",
+        "categoria": "|| Category"
     },
     {
-     "imagen": "",
-     "nombre": "John Doe",
-     "cargo": "Web Designer",
-     "comentario": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed lectus a mauris facilisis porta vel a nunc. Fusce sit amet neque volutpat, pretium risus id, placerat libero. Suspendisse ac      condimentum lectus."    
+        "imagen": "assets/pictures/banda-imagenes/2.jpg",
+        "titulo": "Standard Blog Title Here",
+        "fecha": "27 July, 2014",
+        "categoria": "|| Category"
     },
     {
-     "imagen": "",
-     "nombre": "Jane Doe",
-     "cargo": "Web Designer",
-     "comentario": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed lectus a mauris facilisis porta vel a nunc. Fusce sit amet neque volutpat, pretium risus id, placerat libero. Suspendisse ac      condimentum lectus."    
+        "imagen": "assets/pictures/banda-imagenes/3.jpg",
+        "titulo": "Standard Blog Title Here",
+        "fecha": "27 July, 2014",
+        "categoria": "|| Category"
     },
     {
-     "imagen": "",
-     "nombre": "Tran Mau Tri Tam",
-     "cargo": "Web Designer",
-     "comentario": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed lectus a mauris facilisis porta vel a nunc. Fusce sit amet neque volutpat, pretium risus id, placerat libero. Suspendisse ac      condimentum lectus."    
-    }    
+        "imagen": "assets/pictures/banda-imagenes/4.jpg",
+        "titulo": "Standard Blog Title Here",
+        "fecha": "27 July, 2014",
+        "categoria": "|| Category"
+    },
+    {
+        "imagen": "assets/pictures/banda-imagenes/5.jpg",
+        "titulo": "Standard Blog Title Here",
+        "fecha": "27 July, 2014",
+        "categoria": "|| Category"
+    }
 ]
-
