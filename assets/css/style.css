@@ -19,6 +19,7 @@ body {
 
 .grid--wrapper,
 .grid--quarter-columns,
+.grid--quarter-past-columns,
 .grid--two-columns,
 .grid--three-columns,
 .grid--four-columns,
@@ -33,10 +34,13 @@ body {
 
 .grid--wrapper>div {
     grid-column: 2;
+    margin: 50px auto 50px auto;
+    width: 100%;
 }
 
 .grid--two-columns {
     grid-template-columns: 50% 50%;
+    grid-gap: 30px;
 }
 
 .grid--three-columns {
@@ -44,43 +48,135 @@ body {
 }
 
 .grid--four-columns {
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(4, calc(100%/4));
 }
 
 .grid--five-columns {
-    grid-template-columns: 5;
+    grid-template-columns: repeat(5, calc(100%/5));
 }
 
 .grid--six-columns {
-    grid-template-columns: 6;
+    grid-template-columns: repeat(6, calc(100%/6));
 }
 
 .grid--quarter-columns {
     grid-template-columns: 80% 20%;
 }
 
+.grid--quarter-past-columns {
+    grid-template-columns: 80% 10% 10%;
+}
+
 /* Clases Generales */
 
 /* nav */
 
-nav li {
-    padding: 10px;
-    color: black;
-    display: inline;
+nav {
+    height: 100px;
+    line-height: 100px;
 }
+
+nav .grid--wrapper div {
+    margin: 0;
+}
+
+nav li,
+h1,
+#subscripcion li {
+    display: inline-flex;
+    list-style: none;
+}
+
 
 /* header */
 
 header {
-    background-color: turquoise;
+    background-image: url(../../recursos/bc.jpg);
+    height: 900px;
+}
+
+header h2 {
+    font-size: 1em;
+    padding: 200px 0px 0px 0px;
+}
+
+header li {
+    list-style: none;
+    padding: 10px 0px 0px 0px;
+}
+
+/* footer */
+
+footer {
+    background-color: #222533;
+}
+
+/* hover */
+
+footer p,
+footer a,
+.contenedor-imagen:hover .grid--quarter-past-columns {
+    color: white;
+}
+
+/* secciones */
+
+#titulos-imagenes img {
+    /* height: 6363px; */
+    width: 100%;
+    height: 200px;
+    background-color: #f9fafb;
+}
+
+.contenedor-imagen {
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.info .grid--quarter-past-columns {
+    background-color: #fff;
+}
+
+.sombreado {
+    height: 100%;
+    background-color: blue;
+    opacity: 0;
+}
+
+.contenedor-imagen:hover .sombreado {
+    opacity: 0.5;
+}
+
+.contenedor-imagen:hover .grid--quarter-past-columns {
+    background-color: black;
 }
 
 #banda-verde {
     background-color: #20CAA8;
 }
 
+#banda-verde div {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
 #banda-imagenes {
     background-color: grey;
+}
+
+#fondo-menu {
+    background-image: url("../../recursos/purchase3.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: 500px;
 }
 
 #cuatro-columnas {
@@ -88,32 +184,81 @@ header {
     color: white;
 }
 
+/* Otras Clases */
+
+h1 {
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 span {
+    font-weight: 300;
+}
+
+h1,
+nav li a {
+    color: #2c3e50;
+}
+
+nav a,
+header a,
+#subscripcion a,
+footer a {
+    text-decoration: none;
+}
+
+.barra {
+    background-image: url(../../bar3.jpg);
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 4px;
+}
+
+.medida, #small-images img {
+    height: 40px;
+    width: 40px;
+}
+
+.medida-ipad {
+    height: 400px;
+    width: 572px;
+}
+
+.medida-icono {
+    height: 15px;
+    width: 15px;
+}
+
+.size-letra {
+    font-size: 2em;
+}
 
 /* section.grid--wrapper#desplegables>div.grid--two-columns>div*2>h2+p+h3+p+button */
 
+/* menu */
 
+/* Style the buttons that are used to open and close the accordion panel */
 
-
-/*ELIMINAR */
-
-nav {
-    min-height: 5vh;
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
 }
 
-header {
-    min-height: 50vh;
+.active, .accordion:hover {
+    background-color: #ccc; 
 }
 
-#banda-verde,
-#banda-imagenes,
-#pictures-menu,
-#partners {
-    min-height: 15vh;
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }
-
-section,
-footer {
-    min-height: 30vh;
-}
-
-/*END:DELETE */
